@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'todo_app',
+    'bootstrap3',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -106,6 +107,7 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
 )
 
+#added for heroku
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()
 
