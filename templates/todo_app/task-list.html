@@ -30,14 +30,14 @@
                         </td>
                         <td>
                             {% if task%}
-{#                                <a href="{% url 'todo_app:delete-task' pk=task.id %}">#}
-{#                                    <button class="btn btn-danger">Delete</button>#}
-{#                                </a>#}
+                                <a href="{% url 'todo_app:delete-task' pk=task.id %}">
+                                    <button class="btn btn-danger">Delete</button>
+                                </a>
                             {% endif %}
 
-{#                            <a href="{% url 'todo_app:update-task' pk=task.id %}">#}
-{#                                <button class="btn btn-default">Update</button>#}
-{#                            </a>#}
+                            <a href="{% url 'todo_app:update-task' pk=task.id %}">
+                                <button class="btn btn-default">Update</button>
+                            </a>
                         </td>
                     </tr>
                 {% endfor %}
@@ -45,9 +45,9 @@
                 </tbody>
             </table>
             <hr/>
-{#            <a href="{% url 'todo_app:create-task' %}">#}
-{#                <button class="btn btn-primary" type="submit">Create New Task</button>#}
-{#            </a>#}
+            <a href="{% url 'todo_app:create-task' %}">
+                <button class="btn btn-primary" type="submit">Create New Task</button>
+            </a>
         </div>
 
 {% endblock %}
