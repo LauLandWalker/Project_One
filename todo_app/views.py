@@ -1,7 +1,6 @@
-from django.http import HttpResponse
-from django.shortcuts import render
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 from todo_app.models import TaskModel
+from todo_app.forms import TaskForm
 
 
 class ListTask(ListView):
