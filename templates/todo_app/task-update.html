@@ -1,0 +1,26 @@
+{% extends 'todo_app/base.html' %}
+
+{% block title_block %}
+    Update Task
+{% endblock %}
+
+{% load bootstrap3 %}
+
+{% block body_block %}
+
+    <div class="container">
+        <h1>Update the task</h1>
+        <form class="form" action="{% url 'todo_app:update-task' pk=object.id %}" method="post">
+            {% csrf_token %}
+
+            {% bootstrap_form form %}
+
+            <button class="btn btn-primary" type="submit">
+                Update
+            </button>
+        </form>
+        <br/>
+        <a href="{% url 'todo_app:list-task' %}">Go Back</a>
+    </div>
+
+{% endblock %}

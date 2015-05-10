@@ -1,0 +1,26 @@
+{% extends 'todo_app/base.html' %}
+
+{% block title_block %}
+    Delete Task
+{% endblock %}
+
+{% load bootstrap3 %}
+
+{% block body_block %}
+
+    <form class='form' {% url 'todo_app:delete-task' pk=object.id %}' method="post"><h1>Are you done with this task</h1>
+        {% csrf_token %}
+
+    <a>
+        <button class="btn btn-danger" type="submit">Yes</button>
+    </a>
+    <a href="{% url 'todo_app:list-task' %}">
+        <button class="btn btn-default">
+            Go Back
+        </button>
+    </a>
+    </form>
+
+
+
+{% endblock %}

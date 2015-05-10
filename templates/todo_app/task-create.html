@@ -1,0 +1,28 @@
+{% extends 'todo_app/base.html' %}
+
+{% block title_block %}
+    Create New Task
+{% endblock %}
+
+
+
+{% load bootstrap3 %}
+
+
+
+{% block body_block %}
+    <div class="container">
+        <h1>Create New Task</h1>
+        <form action='{% url 'todo_app:create-task' %}' method="post" class="form">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <button class="btn btn-primary" type="submit">Create Now</button>
+        </form>
+        <br/>
+
+        <a href="{% url 'todo_app:list-task' %}">
+            Go Back
+        </a>
+
+    </div>
+{% endblock %}
